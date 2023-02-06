@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Card from "../Components/Card";
 import styles from "../Styles/home.module.css";
+import Loader from "../Components/Loader";
 
 const Home = () => {
   const [input, setInput] = useState("");
@@ -41,7 +42,7 @@ const Home = () => {
       </div>
 
       {loading ? (
-        <div> Loading... </div>
+        <Loader />
       ) : (
         recipes.length > 0 && (
           <div className={styles.allCardsContainer}>
