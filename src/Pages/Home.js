@@ -18,9 +18,9 @@ const Home = () => {
       `https://api.edamam.com/api/recipes/v2?type=public&q=${input}&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     const data = await response.json();
-    console.log(data.hits);
     setRecipes(data.hits);
     setLoading(false);
+    setInput("");
   };
 
   return (
